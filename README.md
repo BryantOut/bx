@@ -235,6 +235,39 @@ $.ajax({
 </script>
 ```
 
+> 补充2  模板引擎中针对返回数据嵌套多层的问题
+
+![](./mdImg/模板引擎.png)
+
+```html
+<!-- 商品列表部分开始 -->
+<div class="shop_list">
+    <!-- 准备一个模板引擎 -->
+    <script type="text/x-art-template" id="tmpl">
+    {{each comments}}
+    <div class="good_group">
+         <div class="list_title">
+              <img src="{{$value.group_img}}" alt="">
+         </div>
+         <div class="list_content">
+          	<ul>
+            {{each $value.goods $value2}}
+            	<li>
+                   <!-- 商品链接 -->
+                   <a href="javascript:;">
+                       <img src="{{$value2.goods_small_logo}}" alt="">
+                       <p>{{$value2.goods_name}}</p>
+                       <i>￥{{$value2.goods_price}}</i>
+                   </a>
+             {{/each}}
+              </ul>
+	</script>
+     </div>
+<!-- 商品列表部分结束 -->
+```
+
+
+
 ## 2  Pagination plugin(分页插件介绍)
 
 > 1、推荐插件下载网址                                    
