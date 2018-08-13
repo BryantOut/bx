@@ -1,0 +1,61 @@
+.view {
+    /* 导航部分开始 */
+    .nav {
+        display: flex;
+        padding: 4px;
+        a {
+            flex: 1;
+            img {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+    /* 导航部分结束 */
+    /* 商品列表部分开始 */
+    .shop_list {
+        padding: 0 4px;
+        .good_group {
+            margin-top: 4px;
+            ul {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-top: 4px;
+                li {
+                    width: 49%;
+                    background-color: #fff;
+                    padding-bottom: 4px;
+                    >a {
+                        img {
+                            width: 80%;
+                            margin: 0 auto;
+                        }
+                        i {
+                            color: red;
+                        }
+                        p {
+                            height: 40px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-bottom: 4px;
+                        }
+                    }
+                    .likeShop {
+                        margin-top: 4px;
+                        text-align: center;
+                        a {
+                            display: inline-block;
+                            width: 80px;
+                        }
+                    }
+                }
+                li:nth-child(-n+2) {
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+    /* 商品列表部分结束 */
+}
+

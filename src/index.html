@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- ./  相对路径
+    /   绝对路径
+    以后我们的网站，都是通过服务器来打开
+    网页，写了根路径
+    1、服务器形式代开 正确
+        a vscode  自带服务器
+        b 结合phpstudy 来使用
+    2、双击打开html页面 错误 => 根路径就定位了 c:
+    3、通过接口去返回一些数据
+        /1.jpg
+        ./1.jpg -->
+    <link rel="stylesheet" href="/lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="/lib/fontawesome/css/font-awesome.min.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <!-- 头部部分开始 -->
+    <header>
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <!-- 头部部分结束-->
+    <!-- 主体部分开始 -->
+    <div class="view">
+        <!-- 轮播图部分开始 -->
+        <div class="mui-slider">
+            <!--支持循环，需要重复图片节点-->
+            <!-- 准备一个模板引擎 -->
+            <script type="text/x-art-template" id="swiperTmpl">
+                <div class="mui-slider-group mui-slider-loop">
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="{{comments[comments.length-1].image_src}}" />
+                        </a>
+                    </div>
+                    {{each comments}}
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="{{$value.image_src}}" />
+                        </a>
+                    </div>
+                    </tr>
+                    {{/each}}
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                                <img src="{{comments[0].image_src}}" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 轮播图中的导航按钮 -->
+                <div class="mui-slider-indicator">
+                    {{each comments}} {{ if $index==0}}
+                    <div class="mui-indicator mui-active"></div>
+                    {{ else }}
+                    <div class="mui-indicator"></div>
+                    {{ /if }} {{/each}}
+                </div>
+            </script>
+        </div>
+        <!-- 轮播图部分结束 -->
+
+        <!-- 导航部分开始 -->
+        <div class="nav">
+            <!-- 准备一个模板引擎 -->
+            <script type="text/x-art-template" id="navTmpl">
+                {{each comments}}
+                <a href="javascript:;">
+                    <img src="{{$value.image_src}}" alt="">
+                </a>
+                {{/each}}
+            </script>
+        </div>
+        <!-- 导航部分结束 -->
+
+        <!-- 商品列表部分开始 -->
+        <div class="shop_list">
+            <!-- 准备一个模板引擎 -->
+            <script type="text/x-art-template" id="tmpl">
+                {{each comments}}
+                <div class="good_group">
+                    <div class="list_title">
+                        <img src="{{$value.group_img}}" alt="">
+                    </div>
+                    <div class="list_content">
+                        <ul>
+                            {{each $value.goods $value2}}
+                            <li>
+                                <!-- 商品链接 -->
+                                <a href="javascript:;">
+                                    <img src="{{$value2.goods_small_logo}}" alt="">
+                                    <p>{{$value2.goods_name}}</p>
+                                    <i>￥{{$value2.goods_price}}</i>
+                                </a>
+                                <!-- 商品相似 -->
+                                <div class="likeShop">
+                                    <a href="javascript:;" class="mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+        </div>
+        <!-- 商品列表部分结束 -->
+    </div>
+    <!-- 主体部分结束 -->
+    <!-- footer部分开始 -->
+    <footer>
+        <ul>
+            <li>
+                <a href="/index.html">
+                    <span class="fa fa-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/category.html">
+                    <span class="fa fa-list-ul"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-user"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- footer部分结束 -->
+    <script src="/lib/mui/js/mui.min.js"></script>
+    <script src="/lib/arttemplate/template-web.js"></script>
+    <script src="/lib/zepto/zepto.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

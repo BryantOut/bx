@@ -1,0 +1,27 @@
+.view {
+    /* leftNav部分开始   */
+    display: flex;
+    overflow: hidden;
+    .leftNav {
+        width: 1rem;
+        font-size: .16rem;
+        // background-color: #0094FF;
+        text-align: center;
+        ul {
+            overflow: hidden;
+            li {
+                height: .4rem;
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+    /* leftNav部分结束 */
+    /* rightCon部分开始 */
+    .rightCon {
+        flex: 1;
+        background-color: #0094FF;
+    }
+    /* rightCon部分结束 */
+}

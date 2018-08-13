@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.view {
+  /* 导航部分开始 */
+  /* 导航部分结束 */
+  /* 商品列表部分开始 */
+  /* 商品列表部分结束 */
+}
+
+.view .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px;
+}
+
+.view .nav a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.view .nav a img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.view .shop_list {
+  padding: 0 4px;
+}
+
+.view .shop_list .good_group {
+  margin-top: 4px;
+}
+
+.view .shop_list .good_group ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.view .shop_list .good_group ul li {
+  width: 49%;
+  background-color: #fff;
+  padding-bottom: 4px;
+}
+
+.view .shop_list .good_group ul li > a img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.view .shop_list .good_group ul li > a i {
+  color: red;
+}
+
+.view .shop_list .good_group ul li > a p {
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.view .shop_list .good_group ul li .likeShop {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.view .shop_list .good_group ul li .likeShop a {
+  display: inline-block;
+  width: 80px;
+}
+
+.view .shop_list .good_group ul li:nth-child(-n+2) {
+  margin-bottom: 2px;
+}
+/*# sourceMappingURL=index.css.map */

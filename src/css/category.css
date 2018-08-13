@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.view {
+  /* leftNav部分开始   */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  /* leftNav部分结束 */
+  /* rightCon部分开始 */
+  /* rightCon部分结束 */
+}
+
+.view .leftNav {
+  width: 1rem;
+  font-size: .16rem;
+  text-align: center;
+}
+
+.view .leftNav ul {
+  overflow: hidden;
+}
+
+.view .leftNav ul li {
+  height: .4rem;
+}
+
+.view .leftNav ul li a {
+  color: #000;
+}
+
+.view .rightCon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #0094FF;
+}
+/*# sourceMappingURL=category.css.map */
