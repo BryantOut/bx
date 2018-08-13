@@ -266,7 +266,19 @@ $.ajax({
 <!-- 商品列表部分结束 -->
 ```
 
+### 1.2  模板引擎中的变量
 
+#### 1.2.1  定义变量
+
+`template.defaults.imports // 定义变量`
+
+![](./mdImg/模板引擎1.png)
+
+#### 1.2.2  使用变量
+
+`{{$imports.url}}//变量使用`
+
+![](./mdImg/模板引擎2.png)
 
 ## 2  Pagination plugin(分页插件介绍)
 
