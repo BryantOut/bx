@@ -87,7 +87,7 @@ template-web.js
 
 ```js
 <!-- 准备一个模板引擎 -->
-  <script type="text/x-art-template" id="tmpl">
+  <script type="text/template" id="tmpl">
     {{each comments}}
     <tr>
       <td class="text-center"><input type="checkbox" value="{{$value["post_id"]}}"></td>
@@ -609,17 +609,17 @@ $.ajax({
 
 ​	可能需要用得到的网站
 
-| 名称         | 网址                                          | 备注               |
-| ------------ | --------------------------------------------- | ------------------ |
-| zepto        | http://www.css88.com/doc/zeptojs_api/         | zepto的中文api     |
-| art-template | http://aui.github.io/art-template/zh-cn/docs/ | 模版引擎           |
-| fontawesome  | http://fontawesome.dashgame.com/              | 字体图标           |
-| mui官网      | http://dev.dcloud.net.cn/mui/                 | 官方网站           |
-| hello-mui    | http://www.dcloud.io/hellomui/                | 在线案例           |
-| mui-辅助类   | http://www.mubrand.com/?post=19               | mui的辅助类        |
-| 品优购在线   | http://pyg.ak48.xyz/                          | 上课参照的案例     |
-| 上课源代码   | https://gitee.com/ukSir/gz20-pyg.git          | 上课的源代码的地址 |
-| api接口文档  | [api.md](api.md)                              |                    |
+| 名称           | 网址                                       | 备注          |
+| ------------ | ---------------------------------------- | ----------- |
+| zepto        | http://www.css88.com/doc/zeptojs_api/    | zepto的中文api |
+| art-template | http://aui.github.io/art-template/zh-cn/docs/ | 模版引擎        |
+| fontawesome  | http://fontawesome.dashgame.com/         | 字体图标        |
+| mui官网        | http://dev.dcloud.net.cn/mui/            | 官方网站        |
+| hello-mui    | http://www.dcloud.io/hellomui/           | 在线案例        |
+| mui-辅助类      | http://www.mubrand.com/?post=19          | mui的辅助类     |
+| 品优购在线        | http://pyg.ak48.xyz/                     | 上课参照的案例     |
+| 上课源代码        | https://gitee.com/ukSir/gz20-pyg.git     | 上课的源代码的地址   |
+| api接口文档      | [api.md](api.md)                         |             |
 
 ## 4  技术详解
 
